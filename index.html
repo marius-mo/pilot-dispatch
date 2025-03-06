@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilot Dispatch - Kvitsøy losformidling</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    iframe {
+        width: 100%;
+        height: 100vh;
+        border: none;
+    }
+</style>
+</head>
+<body>
+    <iframe id="dispatchFrame" src="https://www.shiprep.no/ShipRepWebUI/CurrentPilotages.aspx"></iframe>
+
+    <script>
+        setInterval(() => {
+            document.getElementById('dispatchFrame').contentWindow.location.reload();
+        }, 300000); // Reload every 5 minutes (300,000 milliseconds)
+    </script>
+</body>
+</html>
