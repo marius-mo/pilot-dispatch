@@ -24,8 +24,8 @@
     <script>
         setInterval(() => {
             let frame = document.getElementById('dispatchFrame');
-            frame.src = frame.src; // Alternative reload method avoiding CORS issues
-        }, 300000); // Reload every 5 minutes (300,000 milliseconds)
+            frame.src = "https://www.shiprep.no/ShipRepWebUI/CurrentPilotages.aspx?t=" + new Date().getTime();
+        }, 300000); // Reload every 5 minutes
     </script>
 </body>
 </html>
